@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lurn.Play">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAASAAAAAAAAAAAAAAAAAAAAAAAQIBAAAAAACAAAAA=</HashCode>
+      <FileName>Models\Play.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lurn.Game">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQgAAgAAQAAggAAAAAA=</HashCode>
+      <FileName>Models\Game.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lurn.Deck">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Deck.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Lurn.Card">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Card.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Lurn.WeightedCard">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WeightedCard.vb</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
