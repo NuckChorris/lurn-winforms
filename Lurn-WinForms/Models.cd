@@ -3,36 +3,36 @@
   <Class Name="Lurn.Play">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAASAAAAAAAAAAAAAAAAAAAAAAAQIBAAAAAACAAAAA=</HashCode>
+      <HashCode>BAAASAAAAAAAAAAEAAAAAAAAAAAAAIBAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Play.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lurn.Game">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQgAAgAAQAAggAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAABQgAAgAAQABAgAAAAAQ=</HashCode>
       <FileName>Models\Game.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lurn.Deck">
     <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAIABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>BAIAAABAAAAAAAAgAAAAAAAAAAABAAAAAAAAAABAAAA=</HashCode>
       <FileName>Models\Deck.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lurn.Pack">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pack.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="Lurn.Card">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQACEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Card.vb</FileName>
-    </TypeIdentifier>
-  </Struct>
-  <Struct Name="Lurn.WeightedCard">
-    <Position X="3.25" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\WeightedCard.vb</FileName>
     </TypeIdentifier>
   </Struct>
   <Font Name="Tahoma" Size="8.25" />

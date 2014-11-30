@@ -16,13 +16,16 @@
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Kana</ProductName>
+    <PublisherName>Peter Lejeck</PublisherName>
+    <SuiteName>Lurn</SuiteName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -37,6 +40,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Lurn-WinForms.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -101,6 +106,14 @@
       <DependentUpon>AppWindow.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\CardControl.Designer.vb">
+      <DependentUpon>CardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\CardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Box.vb" />
+    <Compile Include="Models\Pack.vb" />
     <Compile Include="Models\Card.vb" />
     <Compile Include="Models\Deck.vb" />
     <Compile Include="Models\Game.vb" />
@@ -111,6 +124,7 @@
     <Compile Include="Interface\StatusWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Models\Set.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -126,7 +140,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Models\WeightedCard.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Interface\AppWindow.resx">
@@ -134,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\StatusWindow.resx">
       <DependentUpon>StatusWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\CardControl.resx">
+      <DependentUpon>CardControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -155,6 +171,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="LurnPack.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -182,7 +201,21 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\KanaPack.xml" />
+    <Content Include="Data\KanaPack.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Data\KanaPack.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

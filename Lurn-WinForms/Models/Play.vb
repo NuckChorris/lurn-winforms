@@ -28,12 +28,9 @@
         End Get
     End Property
 
-    Public Function Inspect() As String
-        Dim Builder As System.Text.StringBuilder
-        Builder.Append("#<Play ")
-        Builder.Append(String.Format("Question=%s", StringQuestion))
-        Builder.Append(String.Format("Answers=%s", String.Join(",", StringAnswers.ToArray())
-        Builder.Append(">")
-        Return Builder.ToString()
+    Public Overrides Function ToString() As String
+        Return String.Format("#<Play Question={0} Answers={1}>",
+                             StringQuestion,
+                             String.Join(",", StringAnswers.ToArray()))
     End Function
 End Class

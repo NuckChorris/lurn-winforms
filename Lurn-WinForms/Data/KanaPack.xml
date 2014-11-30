@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pack xmlns="LurnPack.xsd" name="Basic Hiragana" price="0.00">
+  <Set name="Vowels" id="hira-vowels">
+    <Card id="a">
+      <Front><![CDATA[あ]]></Front>
+      <Back>a</Back>
+    </Card>
+    <Card id="i">
+      <Front><![CDATA[い]]></Front>
+      <Back>i</Back>
+    </Card>
+    <Card id="u">
+      <Front><![CDATA[う]]></Front>
+      <Back>u</Back>
+    </Card>
+    <Card id="e">
+      <Front><![CDATA[え]]></Front>
+      <Back>e</Back>
+    </Card>
+    <Card id="o">
+      <Front><![CDATA[お]]></Front>
+      <Back>o</Back>
+    </Card>
+  </Set>
+  <Set name="K-" id="hira-k">
+    <Card id="ka">
+      <Front><![CDATA[か]]></Front>
+      <Back>k<em>a</em></Back>
+    </Card>
+    <Card id="ki">
+      <Front><![CDATA[き]]></Front>
+      <Back>k<em>i</em></Back>
+    </Card>
+    <Card id="ku">
+      <Front><![CDATA[く]]></Front>
+      <Back>k<em>u</em></Back>
+    </Card>
+    <Card id="ke">
+      <Front><![CDATA[け]]></Front>
+      <Back>k<em>e</em></Back>
+    </Card>
+    <Card id="ko">
+      <Front><![CDATA[こ]]></Front>
+      <Back>k<em>o</em></Back>
+    </Card>
+  </Set>
+  <Set name="S-" id="hira-s">
+    <Card id="sa">
+      <Front><![CDATA[さ]]></Front>
+      <Back>s<em>a</em></Back>
+    </Card>
+    <Card id="shi">
+      <Front><![CDATA[し]]></Front>
+      <Back>sh<em>i</em></Back>
+    </Card>
+    <Card id="su">
+      <Front><![CDATA[す]]></Front>
+      <Back>s<em>u</em></Back>
+    </Card>
+    <Card id="se">
+      <Front><![CDATA[せ]]></Front>
+      <Back>s<em>e</em></Back>
+    </Card>
+    <Card id="so">
+      <Front><![CDATA[そ]]></Front>
+      <Back>s<em>o</em></Back>
+    </Card>
+  </Set>
+  <Set name="T-" id="hira-t">
+    <Card id="ta">
+      <Front><![CDATA[た]]></Front>
+      <Back>t<em>a</em></Back>
+    </Card>
+    <Card id="chi">
+      <Front><![CDATA[ち]]></Front>
+      <Back>ch<em>i</em></Back>
+    </Card>
+    <Card id="tsu">
+      <Front><![CDATA[つ]]></Front>
+      <Back>ts<em>u</em></Back>
+    </Card>
+    <Card id="te">
+      <Front><![CDATA[て]]></Front>
+      <Back>t<em>e</em></Back>
+    </Card>
+    <Card id="to">
+      <Front><![CDATA[と]]></Front>
+      <Back>t<em>o</em></Back>
+    </Card>
+  </Set>
+</Pack>
