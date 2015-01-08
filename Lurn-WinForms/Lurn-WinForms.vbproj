@@ -106,22 +106,16 @@
       <DependentUpon>AppWindow.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\CardControl.Designer.vb">
-      <DependentUpon>CardControl.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\CardControl.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Models\Box.vb" />
     <Compile Include="Models\Pack.vb" />
     <Compile Include="Models\Card.vb" />
     <Compile Include="Models\Deck.vb" />
     <Compile Include="Models\Game.vb" />
     <Compile Include="Models\Play.vb" />
-    <Compile Include="Interface\StatusWindow.Designer.vb">
-      <DependentUpon>StatusWindow.vb</DependentUpon>
+    <Compile Include="Interface\DebugWindow.Designer.vb">
+      <DependentUpon>DebugWindow.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interface\StatusWindow.vb">
+    <Compile Include="Interface\DebugWindow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Set.vb" />
@@ -145,11 +139,8 @@
     <EmbeddedResource Include="Interface\AppWindow.resx">
       <DependentUpon>AppWindow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\StatusWindow.resx">
-      <DependentUpon>StatusWindow.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\CardControl.resx">
-      <DependentUpon>CardControl.vb</DependentUpon>
+    <EmbeddedResource Include="Interface\DebugWindow.resx">
+      <DependentUpon>DebugWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

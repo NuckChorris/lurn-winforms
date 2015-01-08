@@ -1,19 +1,21 @@
 ﻿Public Class Play
-    Private _Question As Card
-    Private _Answers As List(Of Card)
+    Public Question As Card
+    Public Answers As List(Of Card)
     Private _Flipped As Boolean
 
     Public Sub New(Question As Card, Answers As List(Of Card))
-        _Question = Question
-        _Answers = Answers
+        Me.Question = Question
+        Me.Answers = Answers
+        Me.Answers.Add(Question)
+        ' TODO: shuffle answers so it's not always at the same index
     End Sub
 
     Public ReadOnly Property StringQuestion As String
         Get
             If _Flipped Then
-                Return _Question.Back
+                Return Question.Back
             Else
-                Return _Question.Front
+                Return Question.Front
             End If
         End Get
     End Property
@@ -21,9 +23,9 @@
     Public ReadOnly Property StringAnswers As List(Of String)
         Get
             If _Flipped Then
-                Return From Answer In _Answers Select Answer.Front
+                Return (From Answer In Answers Select Answer.Front).ToList()
             Else
-                Return From Answer In _Answers Select Answer.Back
+                Return (From Answer In Answers Select Answer.Back).ToList()
             End If
         End Get
     End Property

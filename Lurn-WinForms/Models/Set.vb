@@ -13,4 +13,8 @@ Public Class LurnSet
         Me.Name = Name
         Me.Cards = Cards
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return String.Format("#<Set({0}) name={1}>", Id, Name)
+    End Function
 End Class

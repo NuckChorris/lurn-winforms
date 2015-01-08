@@ -1,8 +1,6 @@
-﻿Imports System.Collections.Specialized
-
-Public Class Deck
+﻿Public Class Deck
     Shared _rand As New Random
-    Private _cards As New OrderedDictionary ' Card.Id => WeightedCard
+    Private _cards As New Dictionary(Of String, Card)
     Private _total As Integer = 0
 
     Public Sub New(cards As List(Of Card))
@@ -12,38 +10,15 @@ Public Class Deck
         Next
     End Sub
 
-    ' TODO: stop sorting maybe?
-
-    ' Resort the list by weights and sum the weights for our RNG
-    ' Uses an Insertion Sort, instead of the built-in sorting algorithm.
-    ' This is Insertion Sort's best-case, O(n), and QuickSort's worst-case, O(n^2)
+    ' TODO: switch to a bottom-up event-driven refresh
     Public Sub Refresh()
-        SyncLock Me
-            Dim total = _cards(1).Weight
-            ' For each node, S
-            For s = 1 To _cards.Count - 1
-                total += _cards(s).Weight
-                ' Step backwards, D
-                For d = s - 1 To 0 Step -1
-                    ' Until you hit a node with >= Weight, or 0
-                    If _cards(d).Weight >= _cards(s).Weight Or d = 0 Then
-                        Dim key = _cards.Keys(s)
-                        Dim value = _cards(s)
-                        ' Remove the original S
-                        _cards.RemoveAt(s)
-                        ' Then, insert S after D
-                        _cards.Insert(d + 1, key, value)
-                    End If
-                Next
-            Next
-            _total = total
-        End SyncLock
+        _total = _cards.Values.Aggregate(0, Function(acc, cur) acc + cur.Weight)
     End Sub
 
     ' TODO: ignore recently-pulled cards N% of the time or downrank them somehow
     Private Function RandomIndex(cards As List(Of Card), total As Integer) As Integer
         Dim target = _rand.Next(total)
-        Dim sum = 0 ' chinese food
+        Dim sum = 0 ' lol @ dim sum
         For i = 0 To cards.Count - 1
             sum += cards(i).Weight
             If sum >= target Then
